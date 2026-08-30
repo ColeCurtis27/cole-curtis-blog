@@ -1,0 +1,31 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{{ title or metadata.title }}</title>
+
+  <style>
+    {% include "css/index.css" %}
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/">{{ metadata.title }}</a>
+  </header>
+
+  <main id="main">
+    {{ content | safe }}
+  </main>
+
+  <footer>
+    <p>Built with Eleventy.</p>
+  </footer>
+
+</body>
+</html>
