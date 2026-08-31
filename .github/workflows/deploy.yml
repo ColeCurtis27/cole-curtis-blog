@@ -33,7 +33,7 @@ jobs:
         run: npm ci
 
       - name: Build Eleventy
-        run: ELEVENTY_ENV=production npx @11ty/eleventy
+        run: npx @11ty/eleventy --pathprefix=/cole-curtis-blog/
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
