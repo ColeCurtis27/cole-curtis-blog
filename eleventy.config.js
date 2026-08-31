@@ -5,6 +5,7 @@ const pathPrefix = process.env.ELEVENTY_ENV === "production"
   : "/";
 
 module.exports = function(eleventyConfig) {
+
   eleventyConfig.addGlobalData("pathPrefix", pathPrefix);
 
   // Navigation
@@ -40,4 +41,8 @@ module.exports = function(eleventyConfig) {
 
     return `${year}-${month}-${day}`;
   });
+
+  return {
+    pathPrefix: pathPrefix
+  };
 };
