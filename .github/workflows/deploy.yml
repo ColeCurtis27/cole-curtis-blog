@@ -35,6 +35,13 @@ jobs:
       - name: Build Eleventy
         run: npx @11ty/eleventy --pathprefix=/cole-curtis-blog/
 
+      - name: Check generated links
+        run: |
+          echo "HOME PAGE:"
+          grep -n '<a href=' _site/index.html
+          echo "POST PAGE:"
+          grep -n '<a href=' _site/posts/first-post/index.html
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
