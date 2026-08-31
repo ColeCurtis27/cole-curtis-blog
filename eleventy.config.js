@@ -1,11 +1,14 @@
 const pluginNavigation = require("@11ty/eleventy-navigation");
 
+const pathPrefix = process.env.ELEVENTY_ENV === "production"
+  ? "/cole-curtis-blog/"
+  : "/";
+
 module.exports = function(eleventyConfig) {
+  eleventyConfig.addGlobalData("pathPrefix", pathPrefix);
+
   // Navigation
   eleventyConfig.addPlugin(pluginNavigation);
-
-  // Copy CSS files to the output folder
-  eleventyConfig.addPassthroughCopy("css");
 
   // Create a collection of blog posts
   eleventyConfig.addCollection("posts", function(collectionApi) {
