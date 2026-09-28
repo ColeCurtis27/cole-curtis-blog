@@ -1,0 +1,11 @@
+---
+
+title: Journal 5
+date: 2026-09-28
+layout: layouts/post.njk
+---
+
+For our milestone this past weekend, the team and I felt like we had a lot of work still to do, especially with our core mechanics. So for the last week, I was focused on adding in the first working version of a "combo attack" between the players. Once a threshold amount of damage has been done to the boss, it runs to the middle and enters this new state I have given the boss called stun. The boss stays in the center of the screen not attacking until the combo timer runs out. While this timer is going, there is a formation that spawns on the floor of the room, and there is a marker that each player has to run towards and stay in. At the end of the timer, if all the markers are lit up by the players, then the attack lands and the boss takes a boosted amount of damage before going back to it's normal state machine cycle. If any marker is missing it's player, then no damage is done to the boss and it is free to roam. While the visuals of this happpening in game is currently very bare-bones, I think it is the minimum amount required to test the system if needed. Also, with how I have the system built right now, I feel it'll be not too hard to go in and add more interesting visuals and feedback to the players...hopefully. I have below linked a video of the current build of our game, which showcases the combo multiple times. Also, I linked to my github commit of the combo attack code. For this feature, I would say my estimated time was a litte more accurate than usual. Kinda like I said last week, which is that I estimated it would take a long time to implement and then it did take a while, so I wasn't too far off. Although, I probably could have done it faster if I did a better job of getting rid of distractions. Our communication as a team I still feel is fairly good. We set up a task board inside of notion to keep track of tasks and who is doing them. Although we might have to move it over to github or another notion board, I think it helps a lot.
+
+Current Build Video: https://drive.google.com/file/d/1WSZ4O8etwPAOwMm9ysIotOAIvPdZWe1W/view?usp=sharing
+Github Commit: https://github.com/seanholmes05/Elemental-Dungeon/commit/384f519748df2a51af59944878fa594b07b445a0
