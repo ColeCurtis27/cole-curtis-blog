@@ -1,7 +1,7 @@
 ---
 
-title: Journal 7
-date: 2026-10-13
+title: Journal 8
+date: 2026-10-19
 layout: layouts/post.njk
 ---
 
